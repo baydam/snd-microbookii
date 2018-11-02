@@ -32,12 +32,9 @@ static struct snd_pcm_hardware microbookii_pcm_hardware = {
 		| SNDRV_PCM_INFO_INTERLEAVED | SNDRV_PCM_INFO_BATCH
 		| SNDRV_PCM_INFO_BLOCK_TRANSFER,
 	.formats = SNDRV_PCM_FMTBIT_S24_3BE,
-	/*
 	.rates		= SNDRV_PCM_RATE_44100 | SNDRV_PCM_RATE_48000 |
 	SNDRV_PCM_RATE_96000, .rate_min	= 44100, .rate_max	= 96000,
-	*/
-	.rates = SNDRV_PCM_RATE_96000,
-	.rate_min = 96000,
+	.rate_min = 44100,
 	.rate_max = 96000,
 	.buffer_bytes_max = 1024 * 1024,
 	.period_bytes_min = 64,
